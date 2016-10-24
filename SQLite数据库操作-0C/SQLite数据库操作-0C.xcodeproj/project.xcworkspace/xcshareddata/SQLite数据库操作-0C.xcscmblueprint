@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D9F9A1A3C94F2D32879379FBC05E5801E4DCB685",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D9F9A1A3C94F2D32879379FBC05E5801E4DCB685" : 9223372036854775807,
+    "FD8C8BD1EFBFBA50A979D8AAE13BF32C9A7D66F1" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CA807EA7-230A-43C5-A5BA-BEE1B6D03B3E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D9F9A1A3C94F2D32879379FBC05E5801E4DCB685" : "Swift-test\/",
+    "FD8C8BD1EFBFBA50A979D8AAE13BF32C9A7D66F1" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SQLite数据库操作-0C",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SQLite数据库操作-0C\/SQLite数据库操作-0C.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/qxuewei\/Swift-test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D9F9A1A3C94F2D32879379FBC05E5801E4DCB685"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/qxuewei\/Personal.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FD8C8BD1EFBFBA50A979D8AAE13BF32C9A7D66F1"
+    }
+  ]
+}
