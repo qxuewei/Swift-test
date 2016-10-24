@@ -13,6 +13,9 @@
 		2E3CEB6D1DBDAB1E002B653F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3CEB6B1DBDAB1E002B653F /* Main.storyboard */; };
 		2E3CEB6F1DBDAB1E002B653F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E3CEB6E1DBDAB1E002B653F /* Assets.xcassets */; };
 		2E3CEB721DBDAB1E002B653F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3CEB701DBDAB1E002B653F /* LaunchScreen.storyboard */; };
+		2E3CEB7B1DBDAB96002B653F /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CEB7A1DBDAB96002B653F /* SQLiteManager.m */; };
+		2E3CEB7E1DBDAF0C002B653F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3CEB7D1DBDAF0C002B653F /* libsqlite3.tbd */; };
+		2E3CEB811DBDBCD7002B653F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CEB801DBDBCD7002B653F /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		2E3CEB6E1DBDAB1E002B653F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E3CEB711DBDAB1E002B653F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E3CEB731DBDAB1E002B653F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E3CEB791DBDAB96002B653F /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		2E3CEB7A1DBDAB96002B653F /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		2E3CEB7D1DBDAF0C002B653F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2E3CEB7F1DBDBCD7002B653F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2E3CEB801DBDBCD7002B653F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3CEB7E1DBDAF0C002B653F /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,7 @@
 			children = (
 				2E3CEB611DBDAB1E002B653F /* SQLite数据库操作-0C */,
 				2E3CEB601DBDAB1E002B653F /* Products */,
+				2E3CEB7C1DBDAF0C002B653F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +77,10 @@
 				2E3CEB701DBDAB1E002B653F /* LaunchScreen.storyboard */,
 				2E3CEB731DBDAB1E002B653F /* Info.plist */,
 				2E3CEB621DBDAB1E002B653F /* Supporting Files */,
+				2E3CEB791DBDAB96002B653F /* SQLiteManager.h */,
+				2E3CEB7A1DBDAB96002B653F /* SQLiteManager.m */,
+				2E3CEB7F1DBDBCD7002B653F /* User.h */,
+				2E3CEB801DBDBCD7002B653F /* User.m */,
 			);
 			path = "SQLite数据库操作-0C";
 			sourceTree = "<group>";
@@ -77,6 +91,14 @@
 				2E3CEB631DBDAB1E002B653F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E3CEB7C1DBDAF0C002B653F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E3CEB7D1DBDAF0C002B653F /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3CEB811DBDBCD7002B653F /* User.m in Sources */,
 				2E3CEB6A1DBDAB1E002B653F /* ViewController.m in Sources */,
 				2E3CEB671DBDAB1E002B653F /* AppDelegate.m in Sources */,
 				2E3CEB641DBDAB1E002B653F /* main.m in Sources */,
+				2E3CEB7B1DBDAB96002B653F /* SQLiteManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SQLiteManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //一般在程序启动就开启app数据库,便于程序内对数据库的各种操作
+    if ([[SQLiteManager shareInstance] openDB]) {
+        NSLog(@"打开/创建数据库成功!");
+    }else{
+        NSLog(@"数据库开启失败!");
+    }
     return YES;
 }
 
