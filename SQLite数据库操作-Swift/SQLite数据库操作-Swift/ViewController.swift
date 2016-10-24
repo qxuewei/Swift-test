@@ -12,12 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        for i in 1...7 {
+//            let name = "name_\(i)"
+//            let age = arc4random_uniform(18).hashValue + i
+//            let icon = "http://qiuxuewei.com/icon\(i).png"
+//            let user : User = User(name: name, age: age, icon: icon)
+//            if user.insertSelfToDB() {
+//                print("第 \(i) 个用户插入成功!")
+//            }
+//        }
+        
+        //修改
     }
 
 

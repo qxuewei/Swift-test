@@ -10,12 +10,13 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //一般在程序启动时开始数据库并建表
+        if SQLiteManager.shareInstance().openDB() {
+            print("开启数据库成功!")
+        }
         return true
     }
 
