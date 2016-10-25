@@ -40,9 +40,22 @@ class User: NSObject {
     
     //MARK: - 类方法
     //将本对象在数据库内所有数据全部输出
-    class func allUserFromDB() -> [User] {
+    class func allUserFromDB() -> [User]? {
+        let querySQL = "SELECT name,age,icon FROM 't_User'"
+        //取出数据库中用户表所有数据
+        let allUserDictArr = SQLiteManager.shareInstance().queryDBData(querySQL: querySQL)
+        print(allUserDictArr)
         
-        return []
+        //将字典数组转化为模型数组
+        if let tempUserDictM = allUserDictArr {
+            // 判断数组如果有值,则遍历,并且转成模型对象,放入另外一个数组中
+            var userModelArrM = [User]()
+            for dict in tempUserDictM {
+                userModelArrM.append(User(dict: dict))
+            }
+            return userModelArrM
+        }
+        return nil
     }
     
     //MARK: - 私有方法

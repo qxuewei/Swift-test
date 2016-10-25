@@ -25,7 +25,20 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-        //修改
+        //修改name_6头像为newIocn
+//        changeIcon(newIcon: "http://newIcon.png")
+        
+        //取出用户表所有数据
+        let userArr = User.allUserFromDB()
+        print(userArr)
+    }
+    
+    func changeIcon(newIcon : String) {
+        //包装修改头像的SQL语句
+        let changeIconSQL = "UPDATE 't_User' SET icon='\(newIcon)' WHERE name='name_6'"
+        if SQLiteManager.shareInstance().execSQL(SQL: changeIconSQL) {
+            print("name_6 头像修改成功!")
+        }
     }
 
 

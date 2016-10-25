@@ -63,6 +63,46 @@ class SQLiteManager: NSObject {
         }
     }
     
+    //查询数据库中数据
+    func queryDBData(querySQL : String) -> [[String : AnyObject]]? {
+        //定义游标对象
+        var stmt : OpaquePointer? = nil
+        
+        //将需要查询的SQL语句转化为C语言
+        if querySQL.lengthOfBytes(using: String.Encoding.utf8) > 0 {
+            let cQuerySQL = (querySQL.cString(using: String.Encoding.utf8))!
+            //进行查询前准备操作
+            // 1> 参数一:数据库对象
+            // 2> 参数二:查询语句
+            // 3> 参数三:查询语句的长度:-1
+            // 4> 参数四:句柄(游标对象)
+            
+            if sqlite3_prepare_v2(db, cQuerySQL, -1, &stmt, nil) == SQLITE_OK {
+                //准备好之后进行解析
+                var queryDataArrM = [[String : AnyObject]]()
+                while sqlite3_step(stmt) == SQLITE_ROW {
+                    //1.获取 解析到的列(字段个数)
+                    let columnCount = sqlite3_column_count(stmt)
+                    //2.遍历某行数据
+                    var dict = [String : AnyObject]()
+                    for i in 0..<columnCount {
+                        // 取出i位置列的字段名,作为字典的键key
+                        let cKey = sqlite3_column_name(stmt, i)
+                        let key : String = String(validatingUTF8: cKey!)!
+                        
+                        //取出i位置存储的值,作为字典的值value
+                        let cValue = sqlite3_column_text(stmt, i)
+                        let value =  String(cString:cValue!)
+                        dict[key] = value as AnyObject
+                    }
+                    queryDataArrM.append(dict)
+                }
+                return queryDataArrM
+            }
+        }
+        return nil
+    }
+    
     
     //MARK: - 私有方法
     //执行建表SQL语句
